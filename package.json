@@ -1,0 +1,30 @@
+{
+  "name": "sequelize_pg",
+  "version": "1.0.0",
+  "description": "crud with PortgreSql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyenlyminhman/sequelize_pg.git"
+  },
+  "keywords": [
+    "sequelize",
+    "and",
+    "postresql"
+  ],
+  "author": "Man Nguyen Ly Minh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyenlyminhman/sequelize_pg/issues"
+  },
+  "homepage": "https://github.com/nguyenlyminhman/sequelize_pg#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pg": "^7.6.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.41.2"
+  }
+}
