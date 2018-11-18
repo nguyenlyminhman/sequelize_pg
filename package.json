@@ -4,7 +4,9 @@
   "description": "crud with PortgreSql",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.js -d dist",
+    "start": "nodemon ./index.js --exec babel-node --presets babel-preset-env"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,13 @@
   },
   "homepage": "https://github.com/nguyenlyminhman/sequelize_pg#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "config": "^2.0.1",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "nodemon": "^1.18.6",
     "pg": "^7.6.1",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.41.2"
