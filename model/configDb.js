@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize');
-
 const UserModel = require('./user');
 const BlogModel = require('./blog');
 const TagModel = require('./tag');
@@ -14,10 +13,6 @@ const sequelize = new Sequelize('sequelize', 'postgres', '', {
     idle: 10000
   }
 });
-// const Project = sequelize.define('Projects', {
-//   title: Sequelize.STRING,
-//   description: Sequelize.TEXT
-// })
 
 const User = UserModel(sequelize, Sequelize)
 const Blog = BlogModel(sequelize, Sequelize)
