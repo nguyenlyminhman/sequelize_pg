@@ -1,4 +1,6 @@
 const user = require('../controller/users')
+const blog = require('../controller/blogs')
+
 module.exports = app => {
 
     app.route('/api/user')
@@ -9,4 +11,8 @@ module.exports = app => {
         .get(user.getById)
         .delete(user.delete)
         .put(user.update)
+
+    app.route('/api/blog')
+        .get(blog.getAll)
+        .post(blog.insert)
 }
