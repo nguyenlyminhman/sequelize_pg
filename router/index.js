@@ -15,4 +15,9 @@ module.exports = app => {
     app.route('/api/blog')
         .get(blog.getAll)
         .post(blog.insert)
+
+    app.route('/api/blog/:id')
+        .get(blog.getById)
+        .delete(blog.delete)
+        .put(blog.update)
 }
