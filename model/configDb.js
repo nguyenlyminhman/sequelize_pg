@@ -7,6 +7,7 @@ const sequelize = new Sequelize('sequelize', 'postgres', '', {
   host: 'localhost',
   dialect: 'postgres',
   logging: false,
+  operatorsAliases: false,
   pool: {
     max: 9,
     min: 0,

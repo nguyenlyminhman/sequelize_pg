@@ -1,5 +1,6 @@
 const user = require('../controller/users')
 const blog = require('../controller/blogs')
+const tag = require('../controller/tags')
 
 module.exports = app => {
 
@@ -20,4 +21,15 @@ module.exports = app => {
         .get(blog.getById)
         .delete(blog.delete)
         .put(blog.update)
+
+        app.route('/api/tag')
+        .get(tag.getAll)
+        .post(tag.insert)
+
+    app.route('/api/tag/:id')
+        .get(tag.getById)
+        .delete(tag.delete)
+        .put(tag.update)
+
+
 }
