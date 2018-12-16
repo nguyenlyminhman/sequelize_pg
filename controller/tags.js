@@ -16,7 +16,7 @@ module.exports = {
 
     getById(req, res) {
         let { id } = req.params
-        Tag.findAll({ where: { id: id } })
+        Tag.findById(id)
             .then(tag => res.status(200).json(tag))
             .catch(err => res.status(500).json({ msg: err }))
     },

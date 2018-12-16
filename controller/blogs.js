@@ -1,7 +1,8 @@
-const { Blog } = require('../model/configDb')
+const { Blog, User, Tag } = require('../model/configDb')
 module.exports = {
 
     getAll(req, res) {
+        console.log(User)
         Blog.findAll()
             .then(blog => res.json(blog))
             .catch(err => res.status(500).json({ msg: err }))
@@ -16,7 +17,7 @@ module.exports = {
 
     getById(req, res) {
         let { id } = req.params
-        Blog.findAll({ where: { id: id } })
+        Blog.findById(id)
             .then(blog => res.status(200).json(blog))
             .catch(err => res.status(500).json({ msg: err }))
     },

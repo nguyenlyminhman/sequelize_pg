@@ -16,7 +16,7 @@ module.exports = {
 
     getById(req, res) {
         let { id } = req.params
-        User.findAll({ where: { id: id } })
+        User.findById(id)
             .then(users => res.status(200).json(users))
             .catch(err => res.status(500).json({ msg: "not found" }))
     },
